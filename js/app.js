@@ -48,3 +48,16 @@ $('document').ready(function () {
   });
 
 });
+
+document.oncontextmenu = function () {
+  return false;
+}
+
+document.onkeydown = function (event) {
+  if (event.which == 123)
+    return false;
+  else if (event.ctrlKey && event.shiftKey && event.keyCode == 73)
+    return false;
+  else if (event.ctrlKey && event.which == 85)
+    return false;
+}
